@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.cls-inline {
+    display: inline-block;
+}
+
+.float-right {
+    float: right;
+}
+
+.card {
+    margin: 5px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cls-inline{
+     margin: 10px;
+     font-size: 30px;
+}
+#name{
+     color: red;
+     font-style: oblique;
+}
+body{
+     /* background-color: brown; */
+}
