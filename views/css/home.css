@@ -31,6 +31,8 @@ main {
      color: red;
      font-style: oblique;
 }
+
 body{
+    position:absolute;
      /* background-color: brown; */
 }

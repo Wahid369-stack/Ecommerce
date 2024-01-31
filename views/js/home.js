@@ -1,6 +1,6 @@
-const url = "http://localhost:5555/products";
+const url = "http://localhost:8080/products";
 // Add to cart url
-const addToCartUrl = 'http://localhost:5555/products/cart/';
+const addToCartUrl = 'http://localhost:8080/products/cart/';
 $(() => {
     $.get(url).done((data) => { populateData(data) });
 

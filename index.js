@@ -4,11 +4,10 @@ const mongoose = require("mongoose");
 const Session = require("express-session");
 const passport = require("passport");
 require("./authentication/passport-local");
-
 const {DB_URL, PORT} = require("./config");
 
 const app = express();
-
+//app.set('view engine', 'html');
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
@@ -26,9 +25,11 @@ app.use(Session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use('/', require("./routes/index-route").route);
-
+routes=require("./routes/index-route").route;
+app.use('/', routes);
+// app.get('/index',function(req,res){
+//     res.render('html/home.html');
+// })
 connectDB(DB_URL).then(() => {
     listen(PORT);
 });

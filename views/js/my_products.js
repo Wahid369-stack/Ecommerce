@@ -1,5 +1,5 @@
-const url = "http://localhost:5555/products/myproducts";
-const url1 = "http://localhost:5555/products";
+const url = "http://localhost:8080/products/myproducts";
+const url1 = "http://localhost:8080/products";
 $(() => {
     $.get(url).done((data) => { populateData(data) });
     $.get(url1+'/name').done((name) => {
@@ -28,9 +28,9 @@ function createCard(data) {
     deleteBtn.click((e) => {
         e.preventDefault();
         $.ajax({
-            url: 'http://localhost:5555/products/' + data._id,
+            url: 'http://localhost:8080/products/' + data._id,
             method: 'DELETE'
-        }).done(() => window.location.replace('http://localhost:5555/user/myproducts'));
+        }).done(() => window.location.replace('http://localhost:8080/user/myproducts'));
     });
 
 

@@ -1,4 +1,4 @@
-const productInfoUrl = "http://localhost:5555/products/" + window.location.href.split('/').pop();
+const productInfoUrl = "http://localhost:8080/products/" + window.location.href.split('/').pop();
 
 $(() => {
     $.get(productInfoUrl).done((product) => {
@@ -13,6 +13,6 @@ $(() => {
         product.name = $('#name').val();
         product.image_url = $('#image_url').val();
         product.price = $('#price').val();
-        $.post(productInfoUrl, product).done(() => window.location.replace("http://localhost:5555/user/myproducts"));
+        $.post(productInfoUrl, product).done(() => window.location.replace("http://localhost:8080/user/myproducts"));
     })
 });
